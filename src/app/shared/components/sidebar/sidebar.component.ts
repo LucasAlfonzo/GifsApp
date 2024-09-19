@@ -14,8 +14,12 @@ export class SidebarComponent {
 
   }
 
-  get tags(){
+  get tags() : string[]{
     return this.gifsService.tagsHistory;
+  }
+
+  showAgain( tag : string ) : void {
+    this.gifsService.searchTag(tag);
   }
 
 }
